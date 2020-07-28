@@ -215,7 +215,9 @@ class Students extends Component {
 <div className='row'>
   
       <Card className='col-sm-12 col-md-2 col-lg-2 card-portf' style={{width: '10%'}}>
-        <Card.Img variant="top" className='imgs' src={item.img} onClick={() => this.openProject(item._id)}/>
+
+      <Link to={'/details/' + item._id} ><Card.Img variant="top" className='imgs' src={item.img} onClick={() => this.openProject(item._id)}/></Link>
+       
         <Card.Body>
           <Card.Title style={{fontStyle:'italic'}}>{item.name} {item.surname}</Card.Title>
          <Button variant='danger' onClick={() => this.delItem(item._id)}>Remove</Button>

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ModalProject from './Components/ModalProject'
 import Students from './Components/Students';
 import Projects from './Components/Projects'
+import Details from './Components/Details'
 import {
   BrowserRouter as Router,
   
@@ -21,8 +22,9 @@ function App () {
               <Link to={'/'} className="nav-link" style={{color: '#fff'}}>Home</Link>  
               <Link to={'/projects'} className="nav-link" style={{ color: '#fff'}}>Projects</Link>  
         </div>
-              <Route exact path='/' component={Students} />
-              <Route path='/projects' component={Projects} />
+              <Route exact path='/'  exact component={Students} />
+              <Route path='/projects/' exact component={Projects} />
+              <Route path='/details/:id' exact component={Details} />
          
               </Router>
        {/* <Router>
