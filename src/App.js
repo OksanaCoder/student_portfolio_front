@@ -16,8 +16,15 @@ import {
 function App () {
     return (
       <>
-        <Students />
-        <ModalProject />
+      <Router>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+              <Link to={'/'} className="nav-link" style={{color: '#fff'}}>Home</Link>  
+              <Link to={'/projects'} className="nav-link" style={{ color: '#fff'}}>Projects</Link>  
+        </div>
+              <Route exact path='/' component={Students} />
+              <Route path='/projects' component={Projects} />
+         
+              </Router>
        {/* <Router>
             <Switch>
                 <Route path='/projects' exact component={Projects}/> 

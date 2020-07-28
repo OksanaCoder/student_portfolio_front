@@ -14,6 +14,33 @@ body {
   text-align: center;
 
 }
+.img-proj {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  /* vertical-align: middle; */
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+/* .img-proj:hover {
+	background: rgba(0, 0, 0, 0.8);
+} */
+.img-proj:hover{
+	left: 0;
+}
+.img-proj:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+
+
 .modal-content {
   background-color: #B53737 !important;
   border: 1px dashed #fff !important;
