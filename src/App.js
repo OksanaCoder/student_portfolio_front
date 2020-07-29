@@ -23,17 +23,10 @@ function App () {
               <Link to={'/projects'} className="nav-link" style={{ color: '#fff'}}>Projects</Link>  
         </div>
               <Route exact path='/'  exact component={Students} />
-              <Route path='/projects/' exact component={Projects} />
-              <Route path='/details/:id' exact component={Details} />
+              <Route path='/projects' exact component={Projects} />
+              <Route path='/details/:id' exact component={Details}/>
          
               </Router>
-       {/* <Router>
-            <Switch>
-                <Route path='/projects' exact component={Projects}/> 
-                <Route path="/:id" component={Projects} />
-            </Switch>
-        </Router>  */}
-
         
     
       </>
