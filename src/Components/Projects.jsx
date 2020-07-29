@@ -20,7 +20,7 @@ export default class Projects extends Component {
         this.setState({ show2: true })
     }
     openModal3 = () => {
-        this.setState({ show2: true })
+        this.setState({ show3: true })
     }
     handleClose = () =>{
         this.setState({ show: false })
@@ -32,7 +32,7 @@ export default class Projects extends Component {
         this.setState({ show2: false })
     }
     handleClose3 = () =>{
-        this.setState({ show2: false })
+        this.setState({ show3: false })
     }
     render() {
         return(
@@ -96,7 +96,7 @@ export default class Projects extends Component {
                   
                     </Modal.Footer>
                 </Modal>
-                <Col lg={4}><img onClick={this.openModal1} className='img-proj' src='https://miro.medium.com/max/1200/1*ay9nx1XdZ3AOzx5Ev8xJEg.png'/></Col>
+                <Col lg={4}><img onClick={this.openModal1} className='img-proj' src='https://cdn4.vectorstock.com/i/1000x1000/90/18/programmer-coder-glasses-html-markup-language-vector-10199018.jpg'/></Col>
                 
                 
                 <Modal show={this.state.show1} onHide={this.handleClose1}>

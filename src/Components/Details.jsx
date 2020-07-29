@@ -4,6 +4,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import ReactDOM from 'react-dom';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import LoadingSpinner from './LoadingSpinner'
 
 
 // const mainBag = {
@@ -18,7 +19,8 @@ export default class Details  extends Component {
     }
 
     // url = 'http://localhost:3001/users'
- 
+    
+    
     componentDidMount = async () => {
     //    document.body.style={mainBag}
         const resp = await fetch('http://localhost:3001/users' + '/' + this.props.match.params.id) 

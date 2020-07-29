@@ -8,10 +8,14 @@ import {
   Switch,
 } from 'react-router-dom';
 import Projects from './Projects'
+// import LoadingSpinner from './Components/LoadingSpinner'
+
 class Students extends Component {
     constructor(props){
         super(props)
         this.state={
+  
+
             data : [],
             projects: [],
             show: false,
@@ -35,7 +39,9 @@ class Students extends Component {
       const result =  await resp.json()
       //console.log(result)
       this.setState({
+   
         data : result.users
+        
       })
       console.log("props from student", this.props.match)
     }
@@ -162,6 +168,9 @@ class Students extends Component {
     // console.log("props from student", this.props)
     return (
       <>
+ 
+
+ 
       <div>
          <div className='container-fluid back-jumbo' style={{position:'relative', padding: '0px 100px'}}>
            <div className='descr' style={{fontStyle:'italic', position:'absolute', top: '350px', left: '300px'}}>
@@ -222,7 +231,8 @@ class Students extends Component {
           <Card.Title style={{fontStyle:'italic'}}>{item.name} {item.surname}</Card.Title>
          <Button variant='danger' onClick={() => this.delItem(item._id)}>Remove</Button>
          <Button variant='success' onClick={() => this.openAndEdit(item._id)}>Edit</Button>
-         <Button variant='dark'>Projects</Button>
+        
+        <Link to={'/projects'} ><Button variant='dark'>Projects</Button></Link>
           {/* <Router>
                <Link to='/projects' ><Button variant='dark'>Projects</Button></Link> 
 
@@ -323,7 +333,7 @@ class Students extends Component {
     
        </div>
     
- 
+
       </>
      );
   }
