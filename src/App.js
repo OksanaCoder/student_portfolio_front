@@ -37,8 +37,8 @@ render() {
         </div>
               <Route exact path='/'  exact component={Students} />
               <Route path='/projects' exact component={Projects} /> 
-            
-              <Route path='/details/:id' exact component={Details}/>
+            { this.state.loading ? <LoadingSpinner /> :  <Route path='/details/:id' exact component={Details}/>}
+             
          
               </Router>
         
